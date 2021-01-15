@@ -10,131 +10,120 @@
   </head>
   <body>
     <form action="" name="registration-form"
-    onsubmit="onSubmit()">
+    autocomplete="off" onsubmit="onSubmit()">
       <fieldset class="block">
         <legend>Personal information</legend>
 
-        <label for="surname">Surname:</label>
-        <input class="input" type="text"
-        maxlength="15" autocomplete="off"
-        id="surname" name="surname">
+        <div class="input">
+          <label for="surname">Surname:</label>
+          <input type="text" maxlength="15"
+          id="surname" name="surname">
+        </div>
 
-        <br>
+        <div class="input">
+          <label for="name">Name:</label>
+          <input type="text" maxlength="0"
+          id="name" name="name">
+        </div>
 
-        <label for="name">Name:</label>
-        <input class="input" type="text"
-        maxlength="0" autocomplete="off"
-        id="name" name="name">
+        <div class="input">
+          <label for="age">How old are You?</label>
+          <input type="number"  value="12"
+          min="12" max="100"
+          id="age" name="age">
+        </div>
 
-        <br>
+        <div class="input">
+          <label for="birth">Full date of birth:</label>
+          <input type="date" id="birth"
+          name="birth">
+        </div>
 
-        <label for="age">How old are You?
-          <input class="input" type="number"
-          value="12" min="12"
-          max="100" id="age"
-          name="age">
-        </label>
-
-        <br>
-
-        <label for="birth">Full date of birth:</label>
-        <input class="input" type="date"
-        id="birth" name="birth">
-
-        <br>
-
-        <label for="accept">I accept the term of the agreement</label>
-        <input class="last-input" type="checkbox"
-        id="accept" name="accept"
-        required>
+        <div class="last-input">
+          <label for="accept">I accept the term of the agreement</label>
+          <input type="checkbox" id="accept"
+          name="accept" required>
+        </div>
       </fieldset>
-
-      <br>
 
       <fieldset class="block">
         <legend>Registration</legend>
 
-        <label for="email">E-mail:</label>
-        <input class="input" type="email"
-        placeholder="email@example.com" maxlength="30"
-        id="email" name="email">
+        <div class="input">
+          <label for="email">E-mail:</label>
+          <input type="email" placeholder="email@example.com"
+          maxlength="30" id="email"
+          name="email">
+        </div>
 
-        <br>
-
-        <label for="password">Password:</label>
-        <input class="last-input" type="password"
-        id="password" name="password">
+        <div class="last-input">
+          <label for="password">Password:</label>
+          <input type="password" id="password"
+          name="password">
+        </div>
       </fieldset>
-
-      <br>
 
       <fieldset class="block">
         <legend>An interesting fact about you!</legend>
 
-        <label for="cats">Do you love cats?</label>
-        <input class="input" type="radio"
-        name="yes/no"> Yes
-        <input class="input" type="radio"
-        name="yes/no" id="cats"> No
+        <div class="input">
+          <label for="cats">Do you love cats?</label>
+          <input type="radio" name="yes/no"
+          id="cats"> Yes
+          <input type="radio" name="yes/no"> No
+        </div>
 
-        <br>
+        <div class="input">
+          <label for="color">What is your favorite color?</label>
+          <input type="color" id="color"
+          name="color">
+        </div>
 
-        <label for="color">What is your favorite color?</label>
-        <input class="input" type="color"
-        id="color" name="color">
+        <div class="input">
+          <label for="sleep-time">What time do you go to bed?</label>
+          <input type="time" id="sleep-time"
+          name="sleep-time"  step="1">
+        </div>
 
-        <br>
+        <div class="input">
+          <label for="cars">What are your favorite brand of cars?</label>
+          <select id="cars" size="4"
+          name="cars" multiple>
+            <option value="">BMW</option>
+            <option value="">Audi</option>
+            <option value="">Lada</option>
+            <option value=""></option>
+          </select>
+        </div>
 
-        <label for="sleep-time">What time do you go to bed?</label>
-        <input class="input" type="time"
-        id="sleep-time" name="sleep-time"
-        step="1">
-
-        <br>
-
-        <label for="cars">What are your favorite brand of cars?</label>
-        <select class="input" id="cars"
-        size="4" name="cars"
-        multiple>
-          <option value="">BMW</option>
-          <option value="">Audi</option>
-          <option value="">Lada</option>
-          <option value=""></option>
-        </select>
-
-        <br>
-
-        <label for="rate-range">How do you rate our work?</label>
-        <input class="last-input" type="range"
-        id="rate-range" value="0">
+        <div class="last-input">
+          <label for="rate-range">How do you rate our work?</label>
+          <input type="range" id="rate-range"
+          value="0">
+        </div>
       </fieldset>
 
-      <br>
-
-      <fieldset class="last-block">
+      <fieldset class="block last-block">
         <legend>Additional info:</legend>
 
-        <label for="comments">Comments:</label>
-        <textarea name="feedback"
-        cols="20" rows="2"
-        autocomplete="off" id="comments"
-        class="input">
-        </textarea>
+        <div class="input">
+          <label for="comments">Comments:</label>
+          <textarea name="feedback" cols="20"
+          rows="2" id="comments">
+          </textarea>
+        </div>
 
-        <br>
-
-        <label for="recommend-select">Would you recommend us?</label>
-        <select name="select" id="recommend-select"
-        size="1" class="last-input">
-          <option value="yes">yes</option>
-          <option value="no">no</option>
-        </select>
+        <div class="last-input">
+          <label for="recommend-select">Would you recommend us?</label>
+          <select name="select" id="recommend-select"
+          size="1">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
       </fieldset>
 
-      <br>
-
-      <input type="submit"
-      value="Submit">
+      <input type="submit" value="Submit">
     </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
